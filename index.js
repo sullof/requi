@@ -1,1 +1,1 @@
-require('./bin/requi')
+require('./bin/requ')
