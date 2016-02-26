@@ -1,6 +1,6 @@
 # urequ
 
-A simple cli command to know which fucking path we have to require when we have a complex project.
+A simple cli command to know WTF is the correct path to be required when we have a complex project.
 
 ## Install
 
