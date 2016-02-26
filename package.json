@@ -1,6 +1,6 @@
 {
   "name": "urequ",
-  "version": "1.1.0",
+  "version": "1.0.0",
   "description": "Command line tool for finding correct require paths",
   "author": "Francesco Sullo",
   "repository": "https://github.com/sullof/urequ",
