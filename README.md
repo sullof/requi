@@ -49,7 +49,7 @@ urequ src/server/controller/jokes.es6 src/server/data.json`
 will return
 ```javascript
 //jokes.es6
-const funnyJson = require('../data.json')
+const dataJson = require('../data.json')
 ```
 
 ### Inject a require statement
