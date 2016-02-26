@@ -16,9 +16,19 @@ urequ requirer required
 
 ### Find a library path
 
-For example, imagine that we have the script `/Users/sullof/Projects/qabra/web/src/server/controller/jokes.es6` and we want to require, inside `jokes.es6` the library at `/Users/sullof/Projects/qabra/common/lib/remote/funny.js`, and we are with the terminal in `/Users/sullof/Projects/qabra/web`.
-
-Using the autocomplete we can easily execute
+For example, imagine that inside 
+```sh
+/Users/sullof/Projects/qabra/web/src/server/controller/jokes.es6
+``` 
+we want to require the library 
+```sh
+/Users/sullof/Projects/qabra/common/lib/remote/funny.js
+```
+and we are in a terminal window at 
+```
+/Users/sullof/Projects/qabra/web
+```
+Using the shell autocomplete we can easily execute
 
 ```sh
 urequ src/server/controller/jokes.es6 ../common/lib/remote/funny.js`
@@ -53,6 +63,7 @@ will inject at the top of `jokes.es6` the line
 ```javascript
 const Data = require('../data.json')
 ```
+If there is a statement `'use strict'` the like is inserted after it. After inserting it, you can move it where you like.
 
 ### MIT Licence
 
