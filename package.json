@@ -1,5 +1,5 @@
 {
-  "name": "requ",
+  "name": "urequ",
   "version": "1.0.0",
   "description": "Command line tool for finding correct require paths",
   "author": "Francesco Sullo",
@@ -9,7 +9,7 @@
   "devDependencies": {
   },
   "bin": {
-    "requ": "bin/requ.js"
+    "urequ": "bin/urequ.js"
   },
   "preferGlobal": "true",
   "license": "MIT",

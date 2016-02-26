@@ -1,17 +1,17 @@
-# requ
+# urequ
 
 A simple cli command to know which fucking path we have to require when we have a complex project.
 
 ## Install
 
 ```
-npm install -g requ
+npm install -g urequ
 ```
 
 ## Usage
 
 ```sh
-requ requirer required
+urequ requirer required
 ```
 
 ### Find a library path
@@ -21,7 +21,7 @@ For example, imagine that we have the script `/Users/sullof/Projects/qabra/web/s
 Using the autocomplete we can easily execute
 
 ```sh
-requ src/server/controller/jokes.es6 ../common/lib/remote/funny.js`
+urequ src/server/controller/jokes.es6 ../common/lib/remote/funny.js`
 ```
 
 which will return
@@ -34,7 +34,7 @@ const funny = require('../../../../../common/lib/remote/funny')
 If the requiring file is not a javascript file the result is a bit different. For example:
 
 ```sh
-requ src/server/controller/jokes.es6 src/server/data.json`
+urequ src/server/controller/jokes.es6 src/server/data.json`
 ```
 will return
 ```javascript
@@ -47,7 +47,7 @@ const funnyJson = require('../data.json')
 If you like, you can inject the line at the top of the requirer, specifying the name of the constant.
 For example:
 ```sh
-requ src/server/controller/jokes.es6 src/server/data.json Data`
+urequ src/server/controller/jokes.es6 src/server/data.json Data`
 ```
 will inject at the top of `jokes.es6` the line
 ```javascript

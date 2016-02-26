@@ -1,0 +1,93 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/Users/sullo/.nvm/v0.10.41/bin/npm', 'publish' ]
+2 info using npm@3.5.2
+3 info using node@v0.10.41
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec { raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/sullo/Projects/urequ',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/sullo/.npm/urequ/1.0.0/package.tgz not in flight; packing
+9 info lifecycle urequ@1.0.0~prepublish: urequ@1.0.0
+10 silly lifecycle urequ@1.0.0~prepublish: no script for prepublish, continuing
+11 verbose tar pack [ '/Users/sullo/.npm/urequ/1.0.0/package.tgz',
+11 verbose tar pack   '/Users/sullo/Projects/urequ' ]
+12 verbose tarball /Users/sullo/.npm/urequ/1.0.0/package.tgz
+13 verbose folder /Users/sullo/Projects/urequ
+14 verbose addLocalTarball adding from inside cache /Users/sullo/.npm/urequ/1.0.0/package.tgz
+15 silly cache afterAdd urequ@1.0.0
+16 verbose afterAdd /Users/sullo/.npm/urequ/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/sullo/.npm/urequ/1.0.0/package/package.json written
+18 silly publish { name: 'urequ',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: 'Command line tool for finding correct require paths',
+18 silly publish   author: { name: 'Francesco Sullo' },
+18 silly publish   repository: { type: 'git', url: 'https://none.for.now' },
+18 silly publish   dependencies: {},
+18 silly publish   devDependencies: {},
+18 silly publish   bin: { urequ: 'bin/urequ.js' },
+18 silly publish   preferGlobal: 'true',
+18 silly publish   license: 'MIT',
+18 silly publish   main: 'index.js',
+18 silly publish   maintainers: [ { name: 'Francesco Sullo', email: 'sullof@gmail.com' } ],
+18 silly publish   readme: '# urequ\n\nA simple cli command to know which fucking path we have to require when we have a complex project.\n\n## Install\n\n```\nnpm install -g urequ\n```\n\n## Usage\n\n```sh\nurequ requirer required\n```\n\n### Find a library path\n\nFor example, imagine that we have the script `/Users/sullof/Projects/qabra/web/src/server/controller/jokes.es6` and we want to require, inside `jokes.es6` the library at `/Users/sullof/Projects/qabra/common/lib/remote/funny.js`, and we are with the terminal in `/Users/sullof/Projects/qabra/web`.\n\nUsing the autocomplete we can easily execute\n\n```sh\nurequ src/server/controller/jokes.es6 ../common/lib/remote/funny.js`\n```\n\nwhich will return\n\n```javascript\n//jokes.es6\nconst funny = require(\'../../../../../common/lib/remote/funny\')\n```\n\nIf the requiring file is not a javascript file the result is a bit different. For example:\n\n```sh\nurequ src/server/controller/jokes.es6 src/server/data.json`\n```\nwill return\n```javascript\n//jokes.es6\nconst funnyJson = require(\'../data.json\')\n```\n\n### Inject a require statement\n\nIf you like, you can inject the line at the top of the requirer, specifying the name of the constant.\nFor example:\n```sh\nurequ src/server/controller/jokes.es6 src/server/data.json Data`\n```\nwill inject at the top of `jokes.es6` the line\n```javascript\nconst Data = require(\'../data.json\')\n```\n\n### MIT Licence\n\nVersion 1.0.0 — 02/25/2016\n\n(c) Francesco Sullo <sullof@gmail.com>\n\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: '32f041edbdb4b1c9703ad66c4b87e09fe1b00f69',
+18 silly publish   _id: 'urequ@1.0.0',
+18 silly publish   scripts: {},
+18 silly publish   _shasum: '3d6f03727e79869ba9987f5ae181663cb190e870',
+18 silly publish   _from: '.' }
+19 verbose getPublishConfig undefined
+20 silly mapToRegistry name urequ
+21 silly mapToRegistry using default registry
+22 silly mapToRegistry registry https://registry.npmjs.org/
+23 silly mapToRegistry uri https://registry.npmjs.org/urequ
+24 verbose publish registryBase https://registry.npmjs.org/
+25 silly publish uploading /Users/sullo/.npm/urequ/1.0.0/package.tgz
+26 verbose request uri https://registry.npmjs.org/urequ
+27 verbose request sending authorization for write operation
+28 info attempt registry request try #1 at 16:50:45
+29 verbose request using bearer token for auth
+30 verbose request id e7a29d879744c8e3
+31 http request PUT https://registry.npmjs.org/urequ
+32 http 403 https://registry.npmjs.org/urequ
+33 verbose headers { 'content-type': 'application/json',
+33 verbose headers   'cache-control': 'max-age=300',
+33 verbose headers   'content-length': '96',
+33 verbose headers   'accept-ranges': 'bytes',
+33 verbose headers   date: 'Fri, 26 Feb 2016 00:50:46 GMT',
+33 verbose headers   via: '1.1 varnish',
+33 verbose headers   connection: 'keep-alive',
+33 verbose headers   'x-served-by': 'cache-lax1423-LAX',
+33 verbose headers   'x-cache': 'MISS',
+33 verbose headers   'x-cache-hits': '0',
+33 verbose headers   'x-timer': 'S1456447845.962510,VS0,VE158' }
+34 verbose request invalidating /Users/sullo/.npm/registry.npmjs.org/urequ on PUT
+35 error publish Failed PUT 403
+36 verbose stack Error: You do not have permission to publish 'urequ'. Are you logged in as the correct user? : urequ
+36 verbose stack     at makeError (/Users/sullo/.nvm/v0.10.41/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+36 verbose stack     at CachingRegistryClient.<anonymous> (/Users/sullo/.nvm/v0.10.41/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+36 verbose stack     at Request._callback (/Users/sullo/.nvm/v0.10.41/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+36 verbose stack     at Request.self.callback (/Users/sullo/.nvm/v0.10.41/lib/node_modules/npm/node_modules/request/request.js:198:22)
+36 verbose stack     at Request.emit (events.js:98:17)
+36 verbose stack     at Request.<anonymous> (/Users/sullo/.nvm/v0.10.41/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+36 verbose stack     at Request.emit (events.js:117:20)
+36 verbose stack     at IncomingMessage.<anonymous> (/Users/sullo/.nvm/v0.10.41/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+36 verbose stack     at IncomingMessage.emit (events.js:117:20)
+36 verbose stack     at _stream_readable.js:944:16
+37 verbose statusCode 403
+38 verbose pkgid urequ
+39 verbose cwd /Users/sullo/Projects/urequ
+40 error Darwin 15.3.0
+41 error argv "node" "/Users/sullo/.nvm/v0.10.41/bin/npm" "publish"
+42 error node v0.10.41
+43 error npm  v3.5.2
+44 error code E403
+45 error You do not have permission to publish 'urequ'. Are you logged in as the correct user? : urequ
+46 error If you need help, you may report this error at:
+46 error     <https://github.com/npm/npm/issues>
+47 verbose exit [ 1, true ]
