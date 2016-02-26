@@ -87,5 +87,6 @@ if (requirer && required) {
     }
 }
 else {
-    console.log('Use: requi requirerFile requiredFile')
+    var pkg = require('../package.json')
+    console.log('urequ '+ pkg.version+'\nUsage: urequ requirer requiredFile')
 }
