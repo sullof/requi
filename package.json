@@ -1,0 +1,23 @@
+{
+  "name": "requ",
+  "version": "1.0.0",
+  "description": "Command line tool for finding correct require paths",
+  "author": "Francesco Sullo",
+  "repository": "https://none.for.now",
+  "dependencies": {
+  },
+  "devDependencies": {
+  },
+  "bin": {
+    "requ": "bin/requ.js"
+  },
+  "preferGlobal": "true",
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "Francesco Sullo",
+      "email": "sullof@gmail.com"
+    }
+  ]
+}
