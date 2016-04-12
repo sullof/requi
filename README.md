@@ -57,13 +57,14 @@ const dataJson = require('../data.json')
 If you like, you can inject the line at the top of the requirer, specifying the name of the constant.
 For example:
 ```sh
-urequ src/server/controller/jokes.es6 src/server/data.json Data`
+urequ src/server/controller/jokes.es6 src/server/data.json Data
 ```
 will inject at the top of `jokes.es6` the line
 ```javascript
 const Data = require('../data.json')
 ```
-If there is a statement `'use strict'` the like is inserted after it. After inserting it, you can move it where you like.
+If there is a statement `'use strict'` the like is inserted after it.
+And, of course, after inserting it, you can move it where you like : )
 
 ### MIT Licence
 
