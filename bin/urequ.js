@@ -62,6 +62,17 @@ if (requirer && required) {
             return match.toUpperCase().substring(1)
         })
 
+    if (requiredVar.indexOf('-') !== -1) {
+        var temp = requiredVar.split('-')
+        requiredVar = temp.reduce(function (rvar, elem) {
+            if (!rvar) {
+                return elem
+            } else {
+                return rvar + elem.substring(0,1).toUpperCase() + elem.substring(1)
+            }
+        }, '')
+    }
+
     console.log('// ' + requirerFile)
     var str = 'const ' + requiredVar + ' = require(\'' + result + '\')'
     console.log(str)
