@@ -101,20 +101,3 @@ else {
     var pkg = require('../package.json')
     console.log('urequ '+ pkg.version+'\nUsage: urequ requirer requiredFile')
 }
-
-
-
-const makeSubmission = require('helpers/makeSubmission')
-
-const giveMe = require('giveme')
-
-const errors = giveMe('common/errors')
-const Logger = giveMe('NodeLogger')
-const BPromise = giveMe('common/promise')
-const promisify = BPromise.promisify
-
-const InterstitialForm = giveMe('InterstitialForm')
-const InterstitialLayout = giveMe('Layout')
-const Submission = giveMe('Submission')
-
-const simpleLayoutJson = giveMe('shared/layouts/simple')
