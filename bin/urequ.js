@@ -99,5 +99,5 @@ if (requirer && required) {
 }
 else {
     var pkg = require('../package.json')
-    console.log('urequ '+ pkg.version+'\nUsage: urequ requirer requiredFile')
+    console.log('urequ '+ pkg.version+'\nUsage: urequ requirer requiredFile\n\nExample: urequ src/server/controller/jokes.es6 src/server/data.json')
 }
